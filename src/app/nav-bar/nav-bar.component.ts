@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog} from '@angular/material/dialog';
+import {LoginFormComponent} from '../login-form/login-form.component';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('LoginForm') LoginForm : MatDialog;
+  constructor(private Dialog:MatDialog) { }
 
   ngOnInit(): void {
   }
 
+  OpenLoginDialog(){
+    this.Dialog.open(LoginFormComponent);
+  }
 }

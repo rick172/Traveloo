@@ -9,6 +9,10 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { FooterComponent } from './footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,9 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    MatButtonModule,MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
